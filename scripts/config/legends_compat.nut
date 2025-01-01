@@ -72,24 +72,49 @@
 ]
 
 //region HardIncompat
-::LegendsCompat.HardIncompat.add("mod_AC", "1.30.33");
+::LegendsCompat.HardIncompat.add("mod_AC", "1.30.33"); // Accessory Companions
 ::LegendsCompat.HardIncompat.add("mod_allCripplesBecomeTheKingsGuard", "1.0");
 ::LegendsCompat.HardIncompat.add("mod_autopilot", "23");
+::LegendsCompat.HardIncompat.add("mod_background_perks", "2.5"); // Starting Perks by Background Hackflow
 ::LegendsCompat.HardIncompat.add("mod_brigandMercenary", "2.34");
+::LegendsCompat.HardIncompat.add("mod_Chirutiru_enemies", "1"); // This entry should cover old Sellswords
 ::LegendsCompat.HardIncompat.add("TheEliteFewCore", "1.2");
-::LegendsCompat.HardIncompat.add("mod_elite_few", "2.4.1");
-::LegendsCompat.HardIncompat.add("mod_every_item_drops", "1.1.1");
+::LegendsCompat.HardIncompat.add("mod_elite_few", "2.4.1"); // Hackflow version
+::LegendsCompat.HardIncompat.add("mod_every_item_drops", "1.1.1"); // Waterplouf version 
+::LegendsCompat.HardIncompat.add("mod_faster", "8");
+::LegendsCompat.HardIncompat.add("mod_items_recipes", "2.0.0");
+::LegendsCompat.HardIncompat.add("mod_jin", "1.0"); // Jurchen mod
+::LegendsCompat.HardIncompat.add("mod_legendary_kriegsgeist_boss_location", "1.0.5"); // SSU has more updated version of this now
+::LegendsCompat.HardIncompat.add("mod_more_buildings", "0.5"); 
+::LegendsCompat.HardIncompat.add("mod_more_followers", "1.1");
+::LegendsCompat.HardIncompat.add("mod_necro", "0.3.0"); // Hackflow's Proper Necromancer
+::LegendsCompat.HardIncompat.add("mod_nggh_magic_concept", "3.0.0-beta.76"); // MC
 ::LegendsCompat.HardIncompat.add("mod_pauseOnView", "3");
+::LegendsCompat.HardIncompat.add("mod_legends_PTR", "2.2.2"); // PTR
+::LegendsCompat.HardIncompat.add("quirks", "0.8.0"); 
+::LegendsCompat.HardIncompat.add("mod_Recruits", "2");
 ::LegendsCompat.HardIncompat.add("mod_reforged", "0.6.12");
-::LegendsCompat.HardIncompat.add("mod_sellswords", "8.2.9");
+::LegendsCompat.HardIncompat.add("mod_RevampedXPSystem", "1.0.0");
+::LegendsCompat.HardIncompat.add("mod_rpgr_raids", "4.0.1");
+::LegendsCompat.HardIncompat.add("mod_sellswords", "8.2.9"); // SSU
+::LegendsCompat.HardIncompat.add("mod_solostart", "1.0"); 
+::LegendsCompat.HardIncompat.add("mod_southernNomad", "1.0");
+::LegendsCompat.HardIncompat.add("mod_standout_enemies", "1.2");
+::LegendsCompat.HardIncompat.add("mod_talents_reworked", "1");
+::LegendsCompat.HardIncompat.add("mod_tavern_arena", "1.0");
+::LegendsCompat.HardIncompat.add("mod_true_balance", "1.8");
+::LegendsCompat.HardIncompat.add("mod_warhammer", "1.0"); // old skaven mod
+::LegendsCompat.HardIncompat.add("mod_wealth", "1");
+::LegendsCompat.HardIncompat.add("mod_weapons", "0.27");
+::LegendsCompat.HardIncompat.add("mod_wushi", "1.0"); // Samurai mod
 //endregion
 
 //region IncompatButPatched
 ::LegendsCompat.SoftIncompat.add("mod_camps_and_artifacts", "3.4");
-::LegendsCompat.SoftIncompat.add("mod_cultists", "1.04");
+::LegendsCompat.SoftIncompat.add("mod_cultists", "1.04"); // Davkul Rising
 ::LegendsCompat.SoftIncompat.add("mod_fantasybro", "1.0");
 ::LegendsCompat.SoftIncompat.add("mod_necropolis", "1.0");
-::LegendsCompat.SoftIncompat.add("mod_PLHO", "0.1.1");
+::LegendsCompat.SoftIncompat.add("mod_PLHO", "0.1.1"); // Darx's Player Hideout
 //endregion
 
 //region IncompatButPatched
