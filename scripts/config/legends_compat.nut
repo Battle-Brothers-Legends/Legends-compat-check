@@ -59,8 +59,14 @@
 ]
 
 //region HardIncompat
+::LegendsCompat.HardIncompat.add("mod_AC", "1.30.33");
+::LegendsCompat.HardIncompat.add("mod_allCripplesBecomeTheKingsGuard", "1.0");
+::LegendsCompat.HardIncompat.add("mod_autopilot", "23");
+::LegendsCompat.HardIncompat.add("mod_brigandMercenary", "2.34");
 ::LegendsCompat.HardIncompat.add("mod_every_item_drops", "1.1.1");
 ::LegendsCompat.HardIncompat.add("mod_pauseOnView", "3");
+::LegendsCompat.HardIncompat.add("mod_reforged", "0.6.12");
+::LegendsCompat.HardIncompat.add("mod_sellswords", "8.2.9");
 //endregion
 
 //region IncompatButPatched
