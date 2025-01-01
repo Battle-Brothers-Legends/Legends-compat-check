@@ -72,13 +72,26 @@
 ]
 
 //region HardIncompat
+::LegendsCompat.HardIncompat.add("mod_AC", "1.30.33");
+::LegendsCompat.HardIncompat.add("mod_allCripplesBecomeTheKingsGuard", "1.0");
+::LegendsCompat.HardIncompat.add("mod_autopilot", "23");
+::LegendsCompat.HardIncompat.add("mod_brigandMercenary", "2.34");
+::LegendsCompat.HardIncompat.add("TheEliteFewCore", "1.2");
+::LegendsCompat.HardIncompat.add("mod_elite_few", "2.4.1");
 ::LegendsCompat.HardIncompat.add("mod_every_item_drops", "1.1.1");
 ::LegendsCompat.HardIncompat.add("mod_pauseOnView", "3");
+::LegendsCompat.HardIncompat.add("mod_reforged", "0.6.12");
+::LegendsCompat.HardIncompat.add("mod_sellswords", "8.2.9");
 //endregion
 
 //region IncompatButPatched
-//::LegendsCompat.SoftIncompat.add("", "");
+::LegendsCompat.SoftIncompat.add("mod_camps_and_artifacts", "3.4");
+::LegendsCompat.SoftIncompat.add("mod_cultists", "1.04");
+::LegendsCompat.SoftIncompat.add("mod_fantasybro", "1.0");
+::LegendsCompat.SoftIncompat.add("mod_necropolis", "1.0");
+::LegendsCompat.SoftIncompat.add("mod_PLHO", "0.1.1");
 //endregion
+
 //region IncompatButPatched
 ::LegendsCompat.IncompatButPatched.add("mod_breditor", "on Legends Discord (#submod_files/Breaky's Battle Brothers Bargain Bin (BBBBB))");
 ::LegendsCompat.IncompatButPatched.add("mod_quickly_swap_items", "on Legends Discord... somewhere");
