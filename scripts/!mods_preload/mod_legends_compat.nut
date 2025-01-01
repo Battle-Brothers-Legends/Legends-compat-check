@@ -1,0 +1,72 @@
+::LegendsCompatMod <- {
+	ID = "mod_legends_compat",
+	Name = "Legends Compat Check",
+	Version = "0.1.0",
+	Hooks = null
+}
+
+local mod = ::Hooks.register(::LegendsCompatMod.ID, ::LegendsCompatMod.Version, ::LegendsCompatMod.Name);
+::LegendsCompatMod.Hooks = mod;
+
+mod.require("mod_msu >= 1.6.0", "mod_legends >= 19.0.0");
+
+mod.queue(">mod_legends", function() {
+	::LegendsCompat.Mod <- ::MSU.Class.Mod(::LegendsCompatMod.ID, ::LegendsCompatMod.Version, ::LegendsCompatMod.Name);
+	::LegendsCompat.Mod.Registry.addModSource(::MSU.System.Registry.ModSourceDomain.GitHub, "https://github.com/Battle-Brothers-Legends/Legends-compat-check");
+	::LegendsCompat.Mod.Registry.setUpdateSource(::MSU.System.Registry.ModSourceDomain.GitHub);
+
+	foreach(mod in ::LegendsCompat.HardIncompat.List) {
+		if (::Hooks.hasMod(mod.ID)) {
+			local name = ::Hooks.getMod(mod.ID).Name;
+			local modVersion = ::LegendsCompat.normalizeVersion(::Hooks.getMod(mod.ID).getVersion().tostring());
+			local text = name + " (" + mod.ID + ")<br>is NOT compatible and will crash your game.";
+			if (mod.Version != null) {
+				local knownVersion = ::LegendsCompat.normalizeVersion(mod.Version);
+				if (::MSU.SemVer.compare(::MSU.SemVer.getTable(modVersion), ::MSU.SemVer.getTable(knownVersion)) > 0)
+					text += "<br>However, your version is newer than one we confirmed not working, it might work, but there's no guarantee."
+			}
+			::LegendsCompat.Mod.Debug.addPopupMessage(text, ::MSU.Popup.State.Full);
+		}
+	}
+
+	foreach(mod in ::LegendsCompat.IncompatButPatched.List) {
+		if (::Hooks.hasMod(mod.ID)) {
+			local hasPatch = mod.PatchID != null && ::Hooks.hasMod(mod.PatchID);
+			if (hasPatch)
+				continue;
+
+			local name = ::Hooks.getMod(mod.ID).Name;
+			local text = name + " (" + mod.ID + ")<br>is NOT compatible, but has patch " + mod.Patch;
+			::LegendsCompat.Mod.Debug.addPopupMessage(text, ::MSU.Popup.State.Full);
+		}
+	}
+
+	foreach (mod in ::LegendsCompat.OtherVersionCompat.List) {
+		if (::Hooks.hasMod(mod.ID)) {
+			local version = ::LegendsCompat.normalizeVersion(::Hooks.getMod(mod.ID).getVersion().tostring());
+			local isVersionCompat = false;
+			foreach(v in mod.Version) {
+				local knownVersion = ::LegendsCompat.normalizeVersion(v);
+				if (::MSU.SemVer.compare(::MSU.SemVer.getTable(knownVersion), ::MSU.SemVer.getTable(version)) == 0) {
+					isVersionCompat = true;
+					break;
+				}
+			}
+			if (isVersionCompat)
+				continue;
+
+			local name = ::Hooks.getMod(mod.ID).Name;
+			local text = name + " (" + mod.ID + ") is NOT compatible, but has different version(s) that might work, check ";
+			foreach (version in mod.Version) {
+				text += version + ",";
+			}
+			::LegendsCompat.Mod.Debug.addPopupMessage(text, ::MSU.Popup.State.Full);
+		}
+	}
+
+	foreach (mod in ::LegendsCompat.Integrated) {
+		if (::Hooks.hasMod(mod.PatchID)) {
+			::LegendsCompat.Mod.Debug.addPopupMessage(mod + "is integrated into Legends, please remove it.", ::MSU.Popup.State.Full);
+		}
+	}
+});
