@@ -29,6 +29,20 @@ mod.queue(">mod_legends", function() {
 		}
 	}
 
+	foreach(mod in ::LegendsCompat.SoftIncompat.List) {
+		if (::Hooks.hasMod(mod.ID)) {
+			local name = ::Hooks.getMod(mod.ID).Name;
+			local modVersion = ::LegendsCompat.normalizeVersion(::Hooks.getMod(mod.ID).getVersion().tostring());
+			local text = ::format("%s(%s)<br>is compatible but might cause weird issues, use at your own risk.", name, mod.ID);
+			if (mod.Version != null) {
+				local knownVersion = ::LegendsCompat.normalizeVersion(mod.Version);
+				if (::MSU.SemVer.compare(::MSU.SemVer.getTable(modVersion), ::MSU.SemVer.getTable(knownVersion)) > 0)
+					text += "<br>However, your version is newer than one we confirmed not working, it might work, but there's no guarantee."
+			}
+			::LegendsCompat.Mod.Debug.addPopupMessage(text, ::MSU.Popup.State.Full);
+		}
+	}
+
 	foreach(mod in ::LegendsCompat.IncompatButPatched.List) {
 		if (::Hooks.hasMod(mod.ID)) {
 			local hasPatch = mod.PatchID != null && ::Hooks.hasMod(mod.PatchID);

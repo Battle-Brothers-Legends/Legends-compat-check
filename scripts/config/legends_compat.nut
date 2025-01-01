@@ -24,6 +24,19 @@
     }
 };
 
+/**
+ * For hooked mods, that technically work, but might cause some weird issues
+ */
+::LegendsCompat.SoftIncompat <- {
+    List = [],
+    function add(_id, _last_known_not_working_version = null) {
+        this.List.push({
+            ID = _id,
+            Version = _last_known_not_working_version,
+        })
+    }
+};
+
 /** For hooked mods that have patches by community */
 ::LegendsCompat.IncompatButPatched <- {
     List = [],
@@ -63,6 +76,9 @@
 ::LegendsCompat.HardIncompat.add("mod_pauseOnView", "3");
 //endregion
 
+//region IncompatButPatched
+//::LegendsCompat.SoftIncompat.add("", "");
+//endregion
 //region IncompatButPatched
 ::LegendsCompat.IncompatButPatched.add("mod_breditor", "on Legends Discord (#submod_files/Breaky's Battle Brothers Bargain Bin (BBBBB))");
 ::LegendsCompat.IncompatButPatched.add("mod_quickly_swap_items", "on Legends Discord... somewhere");
