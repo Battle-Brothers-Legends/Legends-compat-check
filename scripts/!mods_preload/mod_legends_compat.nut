@@ -19,7 +19,7 @@ mod.queue(">mod_legends", function() {
 		if (::Hooks.hasMod(mod.ID)) {
 			local name = ::Hooks.getMod(mod.ID).Name;
 			local modVersion = ::LegendsCompat.normalizeVersion(::Hooks.getMod(mod.ID).getVersion().tostring());
-			local text = name + " (" + mod.ID + ")<br>is NOT compatible and will crash your game.";
+			local text = ::format("%s(%s)<br>is NOT compatible and will crash your game.", name, mod.ID);
 			if (mod.Version != null) {
 				local knownVersion = ::LegendsCompat.normalizeVersion(mod.Version);
 				if (::MSU.SemVer.compare(::MSU.SemVer.getTable(modVersion), ::MSU.SemVer.getTable(knownVersion)) > 0)
@@ -36,7 +36,7 @@ mod.queue(">mod_legends", function() {
 				continue;
 
 			local name = ::Hooks.getMod(mod.ID).Name;
-			local text = name + " (" + mod.ID + ")<br>is NOT compatible, but has patch " + mod.Patch;
+			local text = ::format("%s(%s)<br>is NOT compatible, but has patch %s", name, mod.ID, mod.Patch);
 			::LegendsCompat.Mod.Debug.addPopupMessage(text, ::MSU.Popup.State.Full);
 		}
 	}
@@ -56,7 +56,7 @@ mod.queue(">mod_legends", function() {
 				continue;
 
 			local name = ::Hooks.getMod(mod.ID).Name;
-			local text = name + " (" + mod.ID + ") is NOT compatible, but has different version(s) that might work, check ";
+			local text = ::format("%s(%s)<br>is NOT compatible, but has different version(s) that might work, check ", name, mod.ID);
 			foreach (version in mod.Version) {
 				text += version + ",";
 			}
@@ -65,8 +65,8 @@ mod.queue(">mod_legends", function() {
 	}
 
 	foreach (mod in ::LegendsCompat.Integrated) {
-		if (::Hooks.hasMod(mod.PatchID)) {
-			::LegendsCompat.Mod.Debug.addPopupMessage(mod + "is integrated into Legends, please remove it.", ::MSU.Popup.State.Full);
+		if (::Hooks.hasMod(mod)) {
+			::LegendsCompat.Mod.Debug.addPopupMessage(::format("%s is integrated into Legends, please remove it.", mod), ::MSU.Popup.State.Full);
 		}
 	}
 });
