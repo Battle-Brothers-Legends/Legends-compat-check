@@ -1,13 +1,13 @@
 ::LegendsCompat <- {}
 
 /** Because fuck you, that's why */
-::LegendsCompat.normalizeVersion <- function (version) {
-    local parts = ::split(version, ".");
+::LegendsCompat.normalizeVersion <- function (_version) {
+    local parts = ::split(_version, ".");
     if (parts.len() == 1)
-        return version + ".0.0";
+        return _version + ".0.0";
     if (parts.len() == 2)
-        return version + ".0";
-    return version;
+        return _version + ".0";
+    return _version;
 }
 
 /**
@@ -16,10 +16,11 @@
  */
 ::LegendsCompat.HardIncompat <- {
     List = [],
-    function add(_id, _last_known_not_working_version = null) {
+    function add(_id, _lastKnownNotWorkingVersion = null, _replacement = null) {
         this.List.push({
             ID = _id,
-            Version = _last_known_not_working_version,
+            Version = _lastKnownNotWorkingVersion,
+            Replacement = _replacement
         })
     }
 };
@@ -29,10 +30,11 @@
  */
 ::LegendsCompat.SoftIncompat <- {
     List = [],
-    function add(_id, _last_known_not_working_version = null) {
+    function add(_id, _lastKnownNotWorkingVersion = null, _replacement = null) {
         this.List.push({
             ID = _id,
-            Version = _last_known_not_working_version,
+            Version = _lastKnownNotWorkingVersion,
+            Replacement = _replacement
         })
     }
 };
@@ -40,10 +42,10 @@
 /** For hooked mods that have patches by community */
 ::LegendsCompat.IncompatButPatched <- {
     List = [],
-    function add(_id, _where_patch, _patchModId = null) {
+    function add(_id, _wherePatch, _patchModId = null) {
         this.List.push({
             ID = _id,
-            Patch = _where_patch,
+            Patch = _wherePatch,
             PatchID = _patchModId
         })
     }
@@ -55,10 +57,10 @@
  */
 ::LegendsCompat.OtherVersionCompat <- {
     List = [],
-    function add(_id, _compat_versions) {
+    function add(_id, _compatVersions) {
         this.List.push({
             ID = _id,
-            Version = _compat_versions,
+            Version = _compatVersions
         })
     }
 }
@@ -68,10 +70,11 @@
  */
 ::LegendsCompat.IncompatNotRegistered <- {
     List = [],
-    function add(_name, _files_to_check) {
+    function add(_name, _filesToCheck, _replacement = null) {
         this.List.push({
             ID = _name,
-            Files = _files_to_check
+            Files = _filesToCheck,
+            Replacement = _replacement
         })
     }
 }
@@ -107,7 +110,7 @@
 ::LegendsCompat.HardIncompat.add("mod_buffed_named_items", "1.0.0"); // GinoFelino version
 ::LegendsCompat.HardIncompat.add("CampaignTweakster", "6");
 ::LegendsCompat.HardIncompat.add("mod_champion_beasts", "1.2.0");
-::LegendsCompat.HardIncompat.add("mod_Chirutiru_enemies", "1"); // This entry should cover old Sellswords
+::LegendsCompat.HardIncompat.add("mod_Chirutiru_enemies", "1", "Sellswords not compaible, there's Legends version of this mod on Legends Discord"); // This entry should cover old Sellswords
 ::LegendsCompat.HardIncompat.add("comrades_mod", "4.3.0"); 
 ::LegendsCompat.HardIncompat.add("mod_desertswampSliders", "1.0"); // More map sliders
 ::LegendsCompat.HardIncompat.add("mod_elevation_bindings", "2"); 
@@ -118,7 +121,7 @@
 ::LegendsCompat.HardIncompat.add("mod_equal_stats", "1"); 
 ::LegendsCompat.HardIncompat.add("mod_equipment_loot_chance", "1.0.4"); 
 ::LegendsCompat.HardIncompat.add("mod_every_item_drops", "1.1.1"); // Waterplouf version 
-::LegendsCompat.HardIncompat.add("mod_faster", "8");
+::LegendsCompat.HardIncompat.add("mod_faster", null, "Use Swifter instead, found on Nexus");
 ::LegendsCompat.HardIncompat.add("mod_legends_favoured_enemy_refund", "2.0.1");
 ::LegendsCompat.HardIncompat.add("graven_passive_shield_damage_bonus", "1.0");
 ::LegendsCompat.HardIncompat.add("graven_plentiful_paints", "1.1");
@@ -139,8 +142,8 @@
 ::LegendsCompat.HardIncompat.add("mod_north_expansion", "0.7.2"); // Hamen's doing a Legends compat version in future let's fucking gooooo!
 ::LegendsCompat.HardIncompat.add("mod_origin_customizer", "2.2.4");
 ::LegendsCompat.HardIncompat.add("mod_pauseOnView", "3");
-::LegendsCompat.HardIncompat.add("mod_legends_PTR", "2.2.2"); // PTR
-::LegendsCompat.HardIncompat.add("quicker", "1.3.1"); 
+::LegendsCompat.HardIncompat.add("mod_legends_PTR", "2.2.2", "PTR ded, hue hue"); // PTR
+::LegendsCompat.HardIncompat.add("quicker", "1.3.1", "Use Swifter instead, found on Nexus");
 ::LegendsCompat.HardIncompat.add("quirks", "0.8.0"); 
 ::LegendsCompat.HardIncompat.add("mod_raided", "1.0");
 ::LegendsCompat.HardIncompat.add("mod_Recruits", "2");
