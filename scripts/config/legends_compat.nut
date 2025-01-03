@@ -93,6 +93,7 @@
 // Abyss note: Legends mod incompatibility doc all in except for mods that did not have a modspreload / modID name
 // or mods that had mutliple versions of same mod 1/3/25
 //region HardIncompat
+::LegendsCompat.HardIncompat.add("mod_18bros", null, "Legends has more anyway.");
 ::LegendsCompat.HardIncompat.add("mod_AC", "1.30.33"); // Accessory Companions
 ::LegendsCompat.HardIncompat.add("mod_allCripplesBecomeTheKingsGuard", "1.0");
 ::LegendsCompat.HardIncompat.add("and_justice_for_all", "1.4.0");
