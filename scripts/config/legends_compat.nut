@@ -63,10 +63,23 @@
     }
 }
 
+/**
+ * For mods that are not registered, have no hooks, no IDs, but add new stuff
+ */
+::LegendsCompat.IncompatNotRegistered <- {
+    List = [],
+    function add(_name, _files_to_check) {
+        this.List.push({
+            ID = _name,
+            Files = _files_to_check
+        })
+    }
+}
+
 /** Just a list of integrated mods, to prevent loading them again */
 ::LegendsCompat.Integrated <- [
     "mod_buyback",
-//    "mod_events_delayed_fix",
+    "mod_events_delayed_fix",
     "mod_Jimmys_Tooltips",
     "mod_alwaysLootNamedItems",
     "mod_make_lindwurms_great_again",
@@ -179,4 +192,12 @@
 
 //region OtherVersionCompat
 ::LegendsCompat.OtherVersionCompat.add("mod_plan_perks", ["5.0.0"])
+//endregion
+
+//region IncompatNotRegistered
+::LegendsCompat.IncompatNotRegistered.add("mod_anatomists", [
+"scripts/retinue/followers/remedist_follower.nut",
+"scripts/items/misc/essence_honor_guard_potion_item.nut",
+"scripts/items/misc/essence_geist_potion_item.nut"
+]);
 //endregion

@@ -29,6 +29,34 @@ mod.queue(">mod_legends", function() {
 		}
 	}
 
+	foreach (mod in ::LegendsCompat.IncompatNotRegistered.List) {
+		local files = mod.Files;
+		local name = mod.ID;
+		local foundFiles = 0;
+		foreach (file in files) {
+			local lastSlash = file.find("/");
+			local index = lastSlash;
+			while (index != null) {
+				lastSlash = index;
+				index = file.find("/", lastSlash + 1);
+			}
+
+			local expectedScript = ::split(file, ".")[0];
+			local scriptFiles = this.IO.enumerateFiles(file.slice(0, lastSlash));
+			foreach(scriptFile in scriptFiles) {
+				if (expectedScript == scriptFile) {
+					foundFiles++;
+					break;
+				}
+			}
+		}
+
+		if (foundFiles != 0 && foundFiles == files.len()) {
+			local text = ::format("%s<br>is NOT compatible and will crash your game.", name);
+			::LegendsCompat.Mod.Debug.addPopupMessage(text, ::MSU.Popup.State.Full);
+		}
+	}
+
 	foreach(mod in ::LegendsCompat.SoftIncompat.List) {
 		if (::Hooks.hasMod(mod.ID)) {
 			local name = ::Hooks.getMod(mod.ID).Name;
