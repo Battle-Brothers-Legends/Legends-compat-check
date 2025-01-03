@@ -158,7 +158,7 @@
 ::LegendsCompat.HardIncompat.add("mod_wushi", "1.0"); // Samurai mod
 //endregion
 
-//region IncompatButPatched
+//region SoftIncompat
 ::LegendsCompat.SoftIncompat.add("mod_BLPT", "0.1.2"); // Darx's Bad Luck Protection
 ::LegendsCompat.SoftIncompat.add("mod_bro_storage", "1.0.2"); 
 ::LegendsCompat.SoftIncompat.add("mod_camps_and_artifacts", "3.4");
