@@ -173,6 +173,7 @@
 ::LegendsCompat.HardIncompat.add("mod_weapons", "0.27");
 ::LegendsCompat.HardIncompat.add("mod_world_parameters", "1.0.1");
 ::LegendsCompat.HardIncompat.add("mod_wushi", "1.0"); // Samurai mod
+::LegendsCompat.HardIncompat.add("mod_new_named_weapons", "1.0"); // Zythaer's Better Weapons
 //endregion
 
 //region SoftIncompat
@@ -204,4 +205,29 @@
 "scripts/items/misc/essence_honor_guard_potion_item.nut",
 "scripts/items/misc/essence_geist_potion_item.nut"
 ]);
+::LegendsCompat.IncompatNotRegistered.add("mod_totemer", [
+"scripts/config/mod_totem.nut",
+"scripts/skills/backgrounds/totemer_background.nut",
+"scripts/items/weapons/totem_staff.nut"
+]); // Totemer Origin
+::LegendsCompat.IncompatNotRegistered.add("Purchasable Perks", [
+"scripts/!mods_preload/store_add.nut",
+"scripts/items/bags_belt.nut",
+"scripts/items/book_cooking.nut"
+]); // Purchasable Perks (legends)
+::LegendsCompat.IncompatNotRegistered.add("Nectomancy", [
+"scripts/config/x_more_perks.nut",
+"scripts/skills/actives/necromancy.nut",
+"scripts/skills/perks/perk_necromancy.nut"
+]); // True Necromancy
+::LegendsCompat.IncompatNotRegistered.add("mod_fallen_order", [
+"scripts/crafting/blueprints/order_kite_shield_blueprint2.nut",
+"scripts/crafting/blueprints/order_heater_shield_blueprint2.nut",
+"scripts/crafting/blueprints/order_holy_water_blueprint2.nut"
+]); // UNFINISHED Fallen Order origin
+::LegendsCompat.IncompatNotRegistered.add("witcher_mod", [
+"scripts/skills/actives/gryphon_style.nut",
+"scripts/skills/actives/igni_skill.nut",
+"scripts/skills/actives/quen_skill.nut"
+]); // Witcher Mod Revamp
 //endregion
