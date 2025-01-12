@@ -102,7 +102,7 @@
 ::LegendsCompat.HardIncompat.add("mod_avatar", "1.0.2");
 ::LegendsCompat.HardIncompat.add("mod_avgmax", "1.0"); // Average bro max stats
 ::LegendsCompat.HardIncompat.add("mod_backgrounds_attribute_ranges", "2.0.0");
-::LegendsCompat.HardIncompat.add("mod_background_perks", "2.5"); // Starting Perks by Background Hackflow
+::LegendsCompat.HardIncompat.add("mod_background_perks", "2.6"); // Starting Perks by Background Hackflow
 ::LegendsCompat.HardIncompat.add("battle_fatigue", "0.5.0"); 
 ::LegendsCompat.HardIncompat.add("mod_better_bros", "1.1.0");
 ::LegendsCompat.HardIncompat.add("mod_brawny_nimble", "1.0.1");
@@ -134,7 +134,11 @@
 ::LegendsCompat.HardIncompat.add("mod_lifetime_stats", "1"); 
 ::LegendsCompat.HardIncompat.add("mod_legendary_kriegsgeist_boss_location", "1.0.5"); // SSU has more updated version of this now
 ::LegendsCompat.HardIncompat.add("mod_more_buildings", "0.5"); 
+::LegendsCompat.HardIncompat.add("mod_more_champions_x5");
+::LegendsCompat.HardIncompat.add("mod_more_champions_x10");
+::LegendsCompat.HardIncompat.add("mod_more_champions_x25");
 ::LegendsCompat.HardIncompat.add("mod_more_followers", "1.1");
+::LegendsCompat.HardIncompat.add("mod_moreRecruits", "2");
 ::LegendsCompat.HardIncompat.add("mod_more_weapon_skins", "0.8.0"); // Many of Karl's skins are being integ into Legends
 ::LegendsCompat.HardIncompat.add("mod_necro", "0.3.0"); // Hackflow's Proper Necromancer
 ::LegendsCompat.HardIncompat.add("mod_nggh_magic_concept", "3.0.0-beta.76"); // MC
@@ -204,22 +208,201 @@
 "scripts/retinue/followers/remedist_follower.nut",
 "scripts/items/misc/essence_honor_guard_potion_item.nut",
 "scripts/items/misc/essence_geist_potion_item.nut"
-]);
-::LegendsCompat.IncompatNotRegistered.add("mod_totemer", [
-"scripts/config/mod_totem.nut",
-"scripts/skills/backgrounds/totemer_background.nut",
-"scripts/items/weapons/totem_staff.nut"
-]); // Totemer Origin
+]); // Anatomist Origin Rework
+::LegendsCompat.IncompatNotRegistered.add("mod_auto_recover", [
+"scripts/!mods_preload/mod_auto_recover.nut"
+]); // Auto Recover
+::LegendsCompat.IncompatNotRegistered.add("mod_rule_101_formations", [
+"scripts/config/z_mods_rule_000.nut",
+"scripts/config/z_mods_rule_000_formations.nut"
+]); // Company Formations and all variations
+::LegendsCompat.IncompatNotRegistered.add("mod_pots", [
+"scripts/entity/tactical/enemies/pot.nut",
+"scripts/config/mod_pots.nut"
+]); // Cracking Pots Minigame in Arena
+::LegendsCompat.IncompatNotRegistered.add("dual_wielding", [
+"scripts/crafting/blueprints/flail_dw_blueprint.nut",
+"scripts/crafting/blueprints/heavy_southern_mace_dw_blueprint.nut",
+"scripts/crafting/blueprints/rondel_dagger_dw_blueprint.nut",
+]); // Dual Wielding
+::LegendsCompat.IncompatNotRegistered.add("mod.elves.dwarves", [
+"scripts/skills/backgrounds/dwarf_background.nut",
+"scripts/skills/backgrounds/elf_background.nut"
+]); // Elves and Dwarves
+::LegendsCompat.IncompatNotRegistered.add("Enclave's more Armour and Weapons for Legends", [
+"Enclave Armor Mod/data/scripts/items/helmets/kettle_sallet_1.nut",
+"Enclave Armor Mod/data/scripts/items/helmets/kettle_sallet_2.nut",
+"Enclave Armor Mod/data/scripts/items/helmets/kettle_sallet_3.nut"
+]); //Enclave's more Armour and Weapons
+::LegendsCompat.IncompatNotRegistered.add("Extra_Starting_Scenarios", [
+"scripts/scenarios/world/barbarians_scenario.nut",
+"scripts/scenarios/world/pros_scenario.nut",
+"scripts/scenarios/world/vaegirs_scenario.nut"
+]); //Extra Starting Scenarios
+::LegendsCompat.IncompatNotRegistered.add("z_artifacts_and_camps", [
+"scripts/skills/traits/preternatural_dodge_trait.nut",
+"scripts/skills/traits/bonus_stam_regen_trait.nut",
+"scripts/items/armor_upgrades/litany_of_speed.nut",
+"scripts/items/armor/artifact/artifact_armor.nut"
+]); //Expanded Camps and Artifacts
+::LegendsCompat.IncompatNotRegistered.add("mod_fencer", [
+"scripts/!mods_preload/mod_fencer.nut",
+"scripts/skills/actives/rush.nut"
+]); // Fencer New Skill
+::LegendsCompat.IncompatNotRegistered.add("mod_find_legendary_locations", [
+"scripts/!mods_preload/mod_find_legendary_locations.nut"
+], "similar functionality in submod, on Legends Discord (#submod_files/Find Legendary Maps)"); // Find Grotesque Tree
+::LegendsCompat.IncompatNotRegistered.add("Gender Scenarios", [
+"scripts/events/events/scenario/legend_gendered_seer_intro_event.nut",
+"scripts/events/events/scenario/legend_vala_mid_intro_event.nut",
+"scripts/scenarios/world/legends_gendered_seer_scenario.nut"
+], "It's integrated into Legends"); // Gender Scenarios Legends
+::LegendsCompat.IncompatNotRegistered.add("Graverobbers-start", [
+"scripts/events/events/scenario/graverobbers_intro_event.nut",
+"scripts/scenarios/world/graverobbers_scenario.nut"
+]); // Graverobbers Origin
+::LegendsCompat.IncompatNotRegistered.add("zzz_mod_zzz_delz_houndmasterbgplus", [
+"scripts/items/accessory/accessory_dog.nut",
+"scripts/skills/actives/legend_unleash_warbear.nut",
+"scripts/skills/actives/unleash_animal.nut",
+"scripts/crafting/blueprints/wolf1_blueprint.nut"
+]); // Houndmaster Class Perk Buff
+::LegendsCompat.IncompatNotRegistered.add("mod_leaders_origins", [
+"scripts/scenarios/world/serpent_scenario.nut",
+"scripts/scenarios/world/shepherd_scenario.nut",
+"scripts/scenarios/world/stalker_scenario.nut",
+"scripts/scenarios/world/veteran_scenario.nut",
+"scripts/skills/backgrounds/order_knight_background.nut"
+]); // Leaders
+::LegendsCompat.IncompatNotRegistered.add("mod_oard", [
+"scripts/!mods_preload/mod_tohru_hooks.nut",
+"scripts/ai/tactical/agents/tohru_agent.nut",
+"scripts/mapgen/templates/tactical/tactical_hoard.nut"
+]); //Legendary Location the Hoard
+::LegendsCompat.IncompatNotRegistered.add("mod_spear", [
+"scripts/skills/actives/call_back.nut",
+"scripts/skills/actives/penetration.nut",
+"scripts/config/mod_spear.nut",
+"scripts/items/weapons/legendary/longinus_spear.nut"
+]); // Legendary Spear
+::LegendsCompat.IncompatNotRegistered.add("Lone Chosen", [
+"scripts/skills/traits/hel_chosen_trait.nut",
+"scripts/skills/traits/soul_erased_trait.nut",
+"scripts/skills/traits/thor_chosen_trait.nut"
+]); //Lone Chosen
+::LegendsCompat.IncompatNotRegistered.add("mod_Lute_battle_song_skill", [
+"scripts/skills/actives/battle_song_skill.nut",
+"scripts/skills/effects/battle_song_effect.nut"
+]); // Lute New Skill
+::LegendsCompat.IncompatNotRegistered.add("Mercenary and Brigands Mod", [
+"scripts/skills/perks/perk_verytough.nut",
+"scripts/skills/perks/perk_veteran.nut",
+"scripts/skills/perks/perk_veteran2.nut",
+"scripts/skills/racial/brigands_racial.nut"
+]); // Mercenary and Brigands Mod
+::LegendsCompat.IncompatNotRegistered.add("mod_Universal_Helmets_2.0_Khtulhu", [
+"scripts/items/helmets/named/ahnenerbe_helmet.nut",
+"scripts/events/events/AI_vs_AI.nut",
+"scripts/!mods_preload/!mod_additional_equipment.nut"
+]); // Mod Universal Helmets
+::LegendsCompat.IncompatNotRegistered.add("1.2.3, more ammos mod", [
+"scripts/!mods_preload/mod_legendary_arrow.nut",
+"scripts/!mods_preload/mod_powders.nut",
+"scripts/items/ammo/magic_powder_bag.nut",
+"scripts/items/ammo/effective_powder_bag.nut",
+"scripts/!mods_preload/mod_ammos.nut"
+]); // More Ammos
+::LegendsCompat.IncompatNotRegistered.add("mod_more_champions", [
+"scripts/!mods_preload/mod_morechampions.nut"
+]); // mod_more_champions
+::LegendsCompat.IncompatNotRegistered.add("Mod_Morecrafting", [
+"scripts/crafting/blueprints/heraldic_plates_upgrade_blueprint.nut",
+"scripts/crafting/blueprints/joint_cover_upgrade_blueprint.nut",
+"scripts/crafting/blueprints/leather_neckguard_upgrade_blueprint.nut"
+]); // More Crafting
+::LegendsCompat.IncompatNotRegistered.add("mod_more_scaling_100", [
+"scripts/!mods_preload/mod_more_scaling_100.nut"
+]); // More Scaling
+::LegendsCompat.IncompatNotRegistered.add("mod_more_scaling_200", [
+"scripts/!mods_preload/mod_more_scaling_200.nut"
+]); // More Scaling
+::LegendsCompat.IncompatNotRegistered.add("mod_more_scaling_5", [
+"scripts/!mods_preload/mod_more_scaling_5.nut"
+]); // More Scaling
+::LegendsCompat.IncompatNotRegistered.add("z_mod_OrcWarlords_named_2h_orc_axe_flail", [
+"scripts/!mods_preload/z_orc_2h_named.nut",
+"scripts/items/weapons/named/named_two_handed_orc_axe.nut",
+"scripts/items/weapons/named/named_two_handed_orc_flail.nut"
+]); // Named Two Handed Orc Axe, Flail Stand Alone
+::LegendsCompat.IncompatNotRegistered.add("Olto Mod", [
+"scripts/crafting/blueprints/armor_h_20_blueprint.nut",
+"scripts/crafting/blueprints/armor_h_30_blueprint.nut",
+"scripts/crafting/blueprints/armor_h_320_blueprint.nut"
+]); // OltoMod Test
+::LegendsCompat.IncompatNotRegistered.add("WotN Perks", [
+"scripts/skills/perks/perk_last_stand.nut",
+"scripts/skills/perks/perk_lookout.nut",
+"scripts/skills/perks/perk_rebound.nut"
+]); // Perks for Warriors of the North
 ::LegendsCompat.IncompatNotRegistered.add("Purchasable Perks", [
 "scripts/!mods_preload/store_add.nut",
 "scripts/items/bags_belt.nut",
 "scripts/items/book_cooking.nut"
 ]); // Purchasable Perks (legends)
+::LegendsCompat.IncompatNotRegistered.add("sato_expanded_scenarios", [
+"scripts/!mods_preload/mod_sato_expanded_scenarios.nut",
+"scripts/scenarios/tactical/scenario_sato_barbarians.nut",
+"scripts/scenarios/tactical/scenario_sato_gilded.nut"
+]); // Sato’s Expanded Scenarios
+::LegendsCompat.IncompatNotRegistered.add("sato_established_company", [
+"scripts/events/events/scenario/sato_established_company_intro_event.nut",
+"scripts/scenarios/world/sato_established_company_scenario.nut"
+]); // Sato’s Established Company Origin
+::LegendsCompat.IncompatNotRegistered.add("sato_additional_equipment", [
+"scripts/!mods_preload/!mod_additional_equipment.nut",
+"scripts/items/helmets/closed_conic_helmet.nut",
+"scripts/items/helmets/closed_conic_helmet_with_mail.nut"
+]); // Sato’s Additional Equipment
+::LegendsCompat.IncompatNotRegistered.add("Sons of Spandau", [
+"scripts/events/events/scenario/spandau_intro_event.nut",
+"scripts/scenarios/world/spandau_scenario.nut"
+]); // Sons of Spandau
+::LegendsCompat.IncompatNotRegistered.add("TheTrials", [
+"scripts/config/spawnlist_trials.nut",
+"scripts/events/events/triala.nut",
+"scripts/events/events/trialb.nut"
+]); // The Battle Trials
+::LegendsCompat.IncompatNotRegistered.add("The last Paladin", [
+"scripts/events/events/scenario/last_paladin_intro_event.nut",
+"scripts/scenarios/world/last_paladin_scenario.nut",
+"scripts/skills/backgrounds/paladin22_background.nut",
+"scripts/skills/perks/perk_warrior_of_the_light.nut"
+]); // The last Paladin
+::LegendsCompat.IncompatNotRegistered.add("mod_totemer", [
+"scripts/config/mod_totem.nut",
+"scripts/skills/backgrounds/totemer_background.nut",
+"scripts/items/weapons/totem_staff.nut"
+]); // Totemer Origin
 ::LegendsCompat.IncompatNotRegistered.add("Nectomancy", [
 "scripts/config/x_more_perks.nut",
 "scripts/skills/actives/necromancy.nut",
 "scripts/skills/perks/perk_necromancy.nut"
 ]); // True Necromancy
+::LegendsCompat.IncompatNotRegistered.add("", [
+"",
+"",
+""
+]); //
+::LegendsCompat.IncompatNotRegistered.add("", [
+"",
+"",
+""
+]); //
+
+
+
+
+
 ::LegendsCompat.IncompatNotRegistered.add("mod_fallen_order", [
 "scripts/crafting/blueprints/order_kite_shield_blueprint2.nut",
 "scripts/crafting/blueprints/order_heater_shield_blueprint2.nut",
@@ -230,4 +413,61 @@
 "scripts/skills/actives/igni_skill.nut",
 "scripts/skills/actives/quen_skill.nut"
 ]); // Witcher Mod Revamp
+::LegendsCompat.IncompatNotRegistered.add("witcher_mod PTR", [
+"scripts/skills/effects/willow_potion_effect.nut",
+"scripts/skills/effects/yrden_effect.nut",
+"scripts/skills/traits/sign_trait.nut"
+]); // Witcher Mod Revamp
 //endregion
+
+//region TNF
+::LegendsCompat.HardIncompat.add("tnf_allPoleAP");
+::LegendsCompat.IncompatNotRegistered.add("tnf_17FatigueNimble", ["scripts/!mods_preload/tnf_17FatigueNimble.nut"]);
+::LegendsCompat.IncompatNotRegistered.add("tnf_allRecipes", ["scripts/!mods_preload/tnf_allRecipes.nut"]);
+::LegendsCompat.IncompatNotRegistered.add("tnf_ammoThrowSpear", ["scripts/!mods_preload/tnf_ammoThrowSpear.nut"]);
+::LegendsCompat.IncompatNotRegistered.add("tnf_betterEagleEyes", ["scripts/!mods_preload/tnf_betterEagleEyes.nut"]);
+::LegendsCompat.HardIncompat.add("tnf_discoverLocations");
+::LegendsCompat.HardIncompat.add("tnf_expandedRetinue");
+::LegendsCompat.HardIncompat.add("tnf_fixAmbitionUpdate");
+::LegendsCompat.IncompatNotRegistered.add("tnf_fixKrakenQuests", ["scripts/!mods_preload/tnf_fixKrakenQuests.nut"]);
+::LegendsCompat.HardIncompat.add("tnf_greenskinsNamedWeapons");
+::LegendsCompat.HardIncompat.add("tnf_higherDifficulty");
+::LegendsCompat.IncompatNotRegistered.add("tnf_keepCrusaderOrcSlayer", ["scripts/!mods_preload/tnf_keepCrusaderOrcSlayer.nut"]);
+::LegendsCompat.IncompatNotRegistered.add("tnf_lessLawmen", ["scripts/!mods_preload/tnf_lessLawmen.nut"]);
+::LegendsCompat.IncompatNotRegistered.add("tnf_lessTiny", ["scripts/!mods_preload/tnf_lessTiny.nut"]);
+::LegendsCompat.HardIncompat.add("tnf_mdfTalent1HCompanion");
+::LegendsCompat.HardIncompat.add("tnf_modRNG");
+::LegendsCompat.IncompatNotRegistered.add("tnf_moreMilitia", ["scripts/!mods_preload/tnf_moreMilitia.nut"]);
+::LegendsCompat.HardIncompat.add("tnf_namedShields");
+::LegendsCompat.HardIncompat.add("tnf_newChampions");
+::LegendsCompat.HardIncompat.add("tnf_noBadTraitsCompanions");
+::LegendsCompat.IncompatNotRegistered.add("tnf_noFog", ["scripts/!mods_preload/tnf_noFog.nut"]);
+::LegendsCompat.HardIncompat.add("tnf_noSwallowIndomitable");
+::LegendsCompat.HardIncompat.add("tnf_oldNorseHelmet");
+::LegendsCompat.HardIncompat.add("tnf_refillableNet");
+::LegendsCompat.IncompatNotRegistered.add("tnf_rejects", ["scripts/!mods_preload/tnf_rejects.nut"]);
+::LegendsCompat.HardIncompat.add("tnf_resistFXResilient");
+::LegendsCompat.IncompatNotRegistered.add("tnf_resolveConfident", ["scripts/!mods_preload/tnf_resolveConfident.nut"]);
+::LegendsCompat.IncompatNotRegistered.add("tnf_restoreTailorEvent", ["scripts/!mods_preload/tnf_restoreTailorEvent.nut"]);
+::LegendsCompat.HardIncompat.add("tnf_revisedNamedItems");
+::LegendsCompat.IncompatNotRegistered.add("tnf_seedAnalyzer", ["scripts/!mods_preload/tnf_seedAnalyzer.nut"]);
+::LegendsCompat.HardIncompat.add("tnf_seeNamedItems");
+::LegendsCompat.HardIncompat.add("tnf_survivorNineLives");
+::LegendsCompat.IncompatNotRegistered.add("tnf_triesBowyer", ["scripts/!mods_preload/tnf_triesBowyer.nut"]);
+::LegendsCompat.IncompatNotRegistered.add("tnf_trueNightOwl", ["scripts/!mods_preload/tnf_trueNightOwl.nut"]);
+::LegendsCompat.IncompatNotRegistered.add("tnf_tryout", ["scripts/!mods_preload/tnf_tryout.nut"]);
+//endregion
+
+idk about these:
+//Brothers WoW
+//Dark Age
+//Dark Brotherhood Company
+//Elite Few - Master Bros (Updated by Hackflow)
+//Expanded Tavern Rumours
+//Free Company Start
+//Mod Weapons
+//Names Slings and Staves
+//Named Item Perks
+//Pain from Injuries Mod
+//Q’s Matchlocks
+//The Sidekick
