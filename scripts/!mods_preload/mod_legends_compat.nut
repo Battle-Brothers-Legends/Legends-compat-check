@@ -1,7 +1,7 @@
 ::LegendsCompatMod <- {
 	ID = "mod_legends_compat",
 	Name = "Legends Compat Check",
-	Version = "0.1.0",
+	Version = "0.2.0",
 	Hooks = null
 }
 
