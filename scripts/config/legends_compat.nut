@@ -475,7 +475,7 @@
 ::LegendsCompat.IncompatNotRegistered.add("tnf_tryout", ["scripts/!mods_preload/tnf_tryout.nut"]);
 //endregion
 
-idk about these:
+//idk about these:
 //Brothers WoW
 //Dark Age
 //Dark Brotherhood Company
