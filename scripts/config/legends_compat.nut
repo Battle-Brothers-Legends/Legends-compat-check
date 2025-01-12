@@ -118,11 +118,12 @@
 ::LegendsCompat.HardIncompat.add("sarisofoi_company_tabards"); // Company Tabards
 ::LegendsCompat.HardIncompat.add("comrades_mod", "4.3.0");
 ::LegendsCompat.HardIncompat.add("mod_desertswampSliders", "1.0"); // More map sliders
-::LegendsCompat.HardIncompat.add("mod_elevation_bindings", "2"); 
+::LegendsCompat.HardIncompat.add("mod_effective_hitpoints", "2.0.0");
+::LegendsCompat.HardIncompat.add("mod_elevation_bindings", "2");
 ::LegendsCompat.HardIncompat.add("Mod_Editable_Retinue_MSU", "3.0.3");
 ::LegendsCompat.HardIncompat.add("TheEliteFewCore", "1.2");
 ::LegendsCompat.HardIncompat.add("mod_elite_few", "2.4.1"); // Hackflow version
-::LegendsCompat.HardIncompat.add("mod_enemyWithRandomPerks", "1.0"); 
+::LegendsCompat.HardIncompat.add("mod_enemyWithRandomPerks", "1.0");
 ::LegendsCompat.HardIncompat.add("mod_equal_stats", "1"); 
 ::LegendsCompat.HardIncompat.add("mod_equipment_loot_chance", "1.0.4"); 
 ::LegendsCompat.HardIncompat.add("mod_every_item_drops", "1.1.1"); // Waterplouf version 
@@ -141,6 +142,8 @@
 ::LegendsCompat.HardIncompat.add("mod_items_recipes", "2.0.0");
 ::LegendsCompat.HardIncompat.add("mod_jin", "1.0"); // Jurchen mod
 ::LegendsCompat.HardIncompat.add("mod_lifetime_stats", "1"); 
+::LegendsCompat.HardIncompat.add("lng_combat_tweak", "1.0");
+::LegendsCompat.HardIncompat.add("mod_lessgr", "1.3");
 ::LegendsCompat.HardIncompat.add("mod_legendary_kriegsgeist_boss_location", "1.0.5"); // SSU has more updated version of this now
 ::LegendsCompat.HardIncompat.add("mod_menace", "0.03"); 
 ::LegendsCompat.HardIncompat.add("mod_more_buildings", "0.5"); 
@@ -166,6 +169,7 @@
 ::LegendsCompat.HardIncompat.add("mod_reforged", "0.6.12");
 ::LegendsCompat.HardIncompat.add("mod_RREI", "1.0.0"); // Replace and Restore Equipped Items
 ::LegendsCompat.HardIncompat.add("mod_rpgr_avatar_resistances", "1.5.0");
+::LegendsCompat.HardIncompat.add("mod_Reproach_sword_upgrade", "1.0");
 ::LegendsCompat.HardIncompat.add("mod_RevampedXPSystem", "1.0.0");
 ::LegendsCompat.HardIncompat.add("zmod_rise_of_the_usurper", "1.0.0", "More recent Rotu vers found at Legends / Submods"); // old ass Nexus rotu version
 ::LegendsCompat.HardIncompat.add("mod_rpgr_raids", "4.0.1");
@@ -188,12 +192,14 @@
 ::LegendsCompat.HardIncompat.add("mod_vap", "2.1.0"); // Veteran Attrs and Perks
 ::LegendsCompat.HardIncompat.add("mod_veteran_attributes", "2.0.0");
 ::LegendsCompat.HardIncompat.add("mod_veteranStamina", "4");
+::LegendsCompat.HardIncompat.add("mod_veteranXPToRookies", "4"); // Veteran XP to Rookies
 ::LegendsCompat.HardIncompat.add("mod_warhammer", "1.0"); // old skaven mod
 ::LegendsCompat.HardIncompat.add("mod_wealth", "1");
 ::LegendsCompat.HardIncompat.add("mod_weapons", "0.27");
 ::LegendsCompat.HardIncompat.add("mod_world_parameters", "1.0.1");
 ::LegendsCompat.HardIncompat.add("mod_wushi", "1.0"); // Samurai mod
 ::LegendsCompat.HardIncompat.add("mod_new_named_weapons", "1.0"); // Zythaer's Better Weapons
+::LegendsCompat.HardIncompat.add("mod_xpInReserve", "1.0"); // XP in Reserve
 //endregion
 
 //region SoftIncompat
@@ -308,6 +314,13 @@
 "scripts/skills/backgrounds/dwarf_background.nut",
 "scripts/skills/backgrounds/elf_background.nut"
 ]); // Elves and Dwarves
+::LegendsCompat.IncompatNotRegistered.add("mod_enchant_weapons", [
+"scripts/items/misc/enchant_potion_item.nut",
+"scripts/items/misc/potion_of_rename.nut",
+"scripts/items/misc/dumb_enchant_item.nut",
+"scripts/items/misc/rnamed_potion_item.nut",
+"scripts/!mods_preload/mod_enchant.nut"
+]); // Enchant Weapon
 ::LegendsCompat.IncompatNotRegistered.add("Enclave's more Armour and Weapons for Legends", [
 "Enclave Armor Mod/data/scripts/items/helmets/kettle_sallet_1.nut",
 "Enclave Armor Mod/data/scripts/items/helmets/kettle_sallet_2.nut",
@@ -333,6 +346,9 @@
 "scripts/events/events/scenario/legend_vala_mid_intro_event.nut",
 "scripts/scenarios/world/legends_gendered_seer_scenario.nut"
 ], "It's integrated into Legends"); // Gender Scenarios Legends
+::LegendsCompat.IncompatNotRegistered.add("mod_removelastkillerrestriction", [
+"scripts/!mods_preload/mod_removelastkillerrestriction.nut"
+]); // Get Loot Without Last Hit
 ::LegendsCompat.IncompatNotRegistered.add("Graverobbers-start", [
 "scripts/events/events/scenario/graverobbers_intro_event.nut",
 "scripts/scenarios/world/graverobbers_scenario.nut"
@@ -361,6 +377,14 @@
 "scripts/config/mod_spear.nut",
 "scripts/items/weapons/legendary/longinus_spear.nut"
 ]); // Legendary Spear
+::LegendsCompat.IncompatNotRegistered.add("z_mod_legends_noble_uniform", [
+"scripts/!mods_preload/noble_uniform.nut"
+]); // Legends Noble Army Uniforms
+::LegendsCompat.IncompatNotRegistered.add("mod_lb", [
+"scripts/!mods_preload/mod_lb_faction_action.nut",
+"scripts/!mods_preload/mod_lb_contract.nut",
+"scripts/!mods_preload/mod_lb_location.nut"
+]); //Limit Break Mod
 ::LegendsCompat.IncompatNotRegistered.add("Lone Chosen", [
 "scripts/skills/traits/hel_chosen_trait.nut",
 "scripts/skills/traits/soul_erased_trait.nut",
@@ -405,6 +429,9 @@
 ::LegendsCompat.IncompatNotRegistered.add("mod_more_scaling_5", [
 "scripts/!mods_preload/mod_more_scaling_5.nut"
 ]); // More Scaling
+::LegendsCompat.IncompatNotRegistered.add("Named Item Rarity in Shops", [
+"scripts/!mods_preload/mod_rarity.nut"
+]); // Named Item Rarity in Shops
 ::LegendsCompat.IncompatNotRegistered.add("z_mod_OrcWarlords_named_2h_orc_axe_flail", [
 "scripts/!mods_preload/z_orc_2h_named.nut",
 "scripts/items/weapons/named/named_two_handed_orc_axe.nut",
@@ -415,6 +442,16 @@
 "scripts/crafting/blueprints/armor_h_30_blueprint.nut",
 "scripts/crafting/blueprints/armor_h_320_blueprint.nut"
 ]); // OltoMod Test
+::LegendsCompat.IncompatNotRegistered.add("mod_obsidian_dagger", [
+"scripts/states/hook_tactical_state.nut"
+]); // Obsidian Dagger Loot Fix
+::LegendsCompat.IncompatNotRegistered.add("Main file (The Player NPC Equality Mod)", [
+"scripts/skills/perks/perk_drums_of_war.nut",
+"scripts/skills/perks/perk_iron_lungs.nut"
+]); // The Player NPC Equality Mod
+::LegendsCompat.IncompatNotRegistered.add("mod_tryout_talents_hooks", [
+"scripts/!mods_preload/tryout_talents.nut"
+], "Use Clever Recruiter instead"); // Tryout Talents Alternative
 ::LegendsCompat.IncompatNotRegistered.add("WotN Perks", [
 "scripts/skills/perks/perk_last_stand.nut",
 "scripts/skills/perks/perk_lookout.nut",
@@ -425,6 +462,30 @@
 "scripts/items/bags_belt.nut",
 "scripts/items/book_cooking.nut"
 ]); // Purchasable Perks (legends)
+::LegendsCompat.IncompatNotRegistered.add("mod_ReserveSize", [
+"scripts/!mods_preload/mod_reservesize.nut"
+]); //Reserve Size
+::LegendsCompat.IncompatNotRegistered.add("Sato Pot Tweaks", [
+"scripts/!mods_preload/mod_pots.nut"
+]); // Sato’s Assorted Tweaks
+::LegendsCompat.IncompatNotRegistered.add("Sato Potion Tweaks", [
+"scripts/!mods_preload/mod_potions.nut"
+]); // Sato’s Assorted Tweaks
+::LegendsCompat.IncompatNotRegistered.add("Sato Swordlance to Glaive", [
+"scripts/!mods_preload/mod_swordlances.nut"
+]); // Sato’s Assorted Tweaks
+::LegendsCompat.IncompatNotRegistered.add("sato_flail_tweaks", [
+"scripts/!mods_preload/mod_flails.nut"
+]); // Sato’s Assorted Tweaks
+::LegendsCompat.IncompatNotRegistered.add("sato_handgonne_tweaks", [
+"scripts/!mods_preload/mod_handgonne.nut"
+]); // Sato’s Assorted Tweaks
+::LegendsCompat.IncompatNotRegistered.add("sato_named_weapon_tweaks", [
+"scripts/!mods_preload/mod_named_weapons.nut"
+]); // Sato’s Assorted Tweaks
+::LegendsCompat.IncompatNotRegistered.add("sato_taxidermist_tweaks", [
+"scripts/!mods_preload/mod_taxidermist.nut"
+]); // Sato’s Assorted Tweaks
 ::LegendsCompat.IncompatNotRegistered.add("sato_expanded_scenarios", [
 "scripts/!mods_preload/mod_sato_expanded_scenarios.nut",
 "scripts/scenarios/tactical/scenario_sato_barbarians.nut",
@@ -439,10 +500,20 @@
 "scripts/items/helmets/closed_conic_helmet.nut",
 "scripts/items/helmets/closed_conic_helmet_with_mail.nut"
 ]); // Sato’s Additional Equipment
+::LegendsCompat.IncompatNotRegistered.add("mod_settlement_situations_worldmap_tooltip", [
+"scripts/!mods_preload/mod_settlement_situations_worldmap_tooltip.nut"
+]); // Settlement Situation Worldmap Tooltip
+::LegendsCompat.IncompatNotRegistered.add("mod_stabilized_medium_armor_perk", [
+"scripts/config/stabilized_config.nut",
+"scripts/skills/perks/perk_stabilized.nut"
+]); // Stabilized Perk
 ::LegendsCompat.IncompatNotRegistered.add("Sons of Spandau", [
 "scripts/events/events/scenario/spandau_intro_event.nut",
 "scripts/scenarios/world/spandau_scenario.nut"
 ]); // Sons of Spandau
+::LegendsCompat.IncompatNotRegistered.add("mod_tactical_hit_factors", [
+"scripts/!mods_preload/mod_tactical_hit_factors.nut"
+]); // Tactical Hit Factors
 ::LegendsCompat.IncompatNotRegistered.add("TheTrials", [
 "scripts/config/spawnlist_trials.nut",
 "scripts/events/events/triala.nut",
@@ -474,6 +545,9 @@
 "scripts/!mods_preload/FAP_armor_parts_item.nut",
 "scripts/!mods_preload/FAP_cured_rations_item.nut"
 ]); // Unlimited Food Ammo Supplies
+::LegendsCompat.IncompatNotRegistered.add("mod_location", [
+"scripts/!mods_preload/mod_location.nut"
+]); // Unlock Camps
 ::LegendsCompat.IncompatNotRegistered.add("witcher_mod", [
 "scripts/skills/actives/gryphon_style.nut",
 "scripts/skills/actives/igni_skill.nut",
@@ -523,100 +597,3 @@
 ::LegendsCompat.IncompatNotRegistered.add("tnf_trueNightOwl", ["scripts/!mods_preload/tnf_trueNightOwl.nut"]);
 ::LegendsCompat.IncompatNotRegistered.add("tnf_tryout", ["scripts/!mods_preload/tnf_tryout.nut"]);
 //endregion
-
-
-//4 Stats per level up
-//100% Vala
-//A Mod Collection Repack
-//Close Combat Archer Rework
-//Custom Beggar Origin
-
-
-
-//Editable Retinue Members.
-//    Effective Hitpoints.
-//    Equalized Attributes and Stats.
-//    Enchant Weapon
-//Enemy with Random Perks.
-//    Escaped Slaves Origin Buff
-//Event Frequency Mod
-//Every Contract is a 4 Skull
-//Every Enemy a Champion
-//Favored Enemy on Everybro
-//Fix of Rebalance Retinue Members Without Cart Upgrade
-//Get Loot Without Last Hit
-//Gobbowpoacher Skills.
-//    Healable Injury(Legends).
-//    Hexen Skills Tweak.
-//    Hitpoint Injuries in Combat.
-//Houndmaster Class Perk Buffs Legends.
-//    Improved Training Grounds Legends
-//Improved Ambitions
-//Jimmy's Tooltip
-//Legends Noble Army Uniforms.
-//    Legends Favoured Enemy Perk Point Refund.
-//    Less Severe Permanent Injuries.
-//    Less Grind 50.
-//Lifetime Stats
-//Limit Break Mod.
-//    Lindwurm Bugfix
-//LNG’s Realistic Combat.
-//    LNG’s True Handgonne.
-//    Long Time Heavy Injuries Instead of Permanent.
-//LGS Enhanced Tooltip
-//More Bandits
-//More Indirect Numeral Adjectives
-//More Profit from Some Contracts
-//More Map Sliders for Legends
-//More Profit From Some Contracts
-//Named Item Rarity in Shops
-//No Hit Percentage Cap - 2022 edition
-//No Restriction Arena
-//No More Trash Named Weapons
-//Origin Customizer.
-//    Obsidian Dagger Loot Fix
-//Proper Raids
-//Quicker
-//Quickly Swap Items
-//Reserve Size.
-//    Remove Hit Chance Cap
-//Replace and Restore Equipped Items
-//Reproach of the Old Gods Upgrade.
-//Revamped XP
-//Ryger's Perk Selection Tooltip Overhaul
-//Sato’s Assorted Tweaks
-//Settlement Situation Tooltip
-//Settlement Situation Worldmap Tooltip
-//Static Perk Trees for Legends.
-//    Slightly Bigger Mods.
-//    Stabilized Perk.
-//    Standardize Bro Counts
-//Tactical Hit Factors
-//Temple Remove Injuries.
-//    The Player NPC Equality Mod
-//Tweaks and Fixes
-//Trade Monster Loot Price Increase
-//Tryout Talents Alternative
-//Turn it in
-//Universal Mod
-//Unlock Camps
-//Unlock Retinues
-//Uncapped Levels
-//Veteran XP to Rookies
-//XP in Reserve
-
-
-
-//idk about these:
-//Brothers WoW
-//Dark Age
-//Dark Brotherhood Company
-//Elite Few - Master Bros (Updated by Hackflow)
-//Expanded Tavern Rumours
-//Free Company Start
-//Mod Weapons
-//Names Slings and Staves
-//Named Item Perks
-//Pain from Injuries Mod
-//Q’s Matchlocks
-//The Sidekick
