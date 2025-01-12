@@ -103,7 +103,8 @@
 ::LegendsCompat.HardIncompat.add("mod_avgmax", "1.0"); // Average bro max stats
 ::LegendsCompat.HardIncompat.add("mod_backgrounds_attribute_ranges", "2.0.0");
 ::LegendsCompat.HardIncompat.add("mod_background_perks", "2.6"); // Starting Perks by Background Hackflow
-::LegendsCompat.HardIncompat.add("battle_fatigue", "0.5.0"); 
+::LegendsCompat.HardIncompat.add("mod_balanced_tryout", "1.0"); // Balanced Tryouts
+::LegendsCompat.HardIncompat.add("battle_fatigue", "0.5.0");
 ::LegendsCompat.HardIncompat.add("mod_better_bros", "1.1.0");
 ::LegendsCompat.HardIncompat.add("mod_brawny_nimble", "1.0.1");
 ::LegendsCompat.HardIncompat.add("mod_brigandMercenary", "2.34");
@@ -114,7 +115,8 @@
 ::LegendsCompat.HardIncompat.add("mod_challengeScenarioPack", "1.0");
 ::LegendsCompat.HardIncompat.add("mod_champion_beasts", "1.2.0");
 ::LegendsCompat.HardIncompat.add("mod_Chirutiru_enemies", "1", "Sellswords not compaible, there's Legends version of this mod on Legends Discord"); // This entry should cover old Sellswords
-::LegendsCompat.HardIncompat.add("comrades_mod", "4.3.0"); 
+::LegendsCompat.HardIncompat.add("sarisofoi_company_tabards"); // Company Tabards
+::LegendsCompat.HardIncompat.add("comrades_mod", "4.3.0");
 ::LegendsCompat.HardIncompat.add("mod_desertswampSliders", "1.0"); // More map sliders
 ::LegendsCompat.HardIncompat.add("mod_elevation_bindings", "2"); 
 ::LegendsCompat.HardIncompat.add("Mod_Editable_Retinue_MSU", "3.0.3");
@@ -221,22 +223,82 @@
 //endregion
 
 //region IncompatNotRegistered
-::LegendsCompat.IncompatNotRegistered.add("mod_anatomists", [ // Anatomist Origin Rework
+::LegendsCompat.IncompatNotRegistered.add("mod_anatomists", [
 "scripts/retinue/followers/remedist_follower.nut",
 "scripts/items/misc/essence_honor_guard_potion_item.nut",
 "scripts/items/misc/essence_geist_potion_item.nut"
 ]); // Anatomist Origin Rework
+::LegendsCompat.IncompatNotRegistered.add("mod_1AC_MAIN", [
+"scripts/config/!!MAIN_IS_POLEARMS.nut",
+"scripts/config/!!MAIN_IS_POLEARMS.nut",
+"scripts/config/!!MAIN_IS_RECOVER.nut"
+]); // Altered Combat Main
+::LegendsCompat.IncompatNotRegistered.add("main", [
+"scripts/!mods_preload/mod_ae_perkBEYE.nut",
+"scripts/!mods_preload/mod_ae_perkDuelist.nut",
+"scripts/!mods_preload/mod_ae_perkRAdvantage.nut"
+]); // Altered Things
+::LegendsCompat.IncompatNotRegistered.add("difficulty", [
+"scripts/!mods_preload/mod_ae_difficulty.nut"
+]); // Altered Things
+::LegendsCompat.IncompatNotRegistered.add("aw_all_upd2020", [
+"scripts/skills/special/weapon_check.nut",
+"scripts/skills/special/stored_ap_1.nut",
+"scripts/skills/special/balance_check1.nut"
+]); // Altered Weapons
 ::LegendsCompat.IncompatNotRegistered.add("mod_auto_recover", [
 "scripts/!mods_preload/mod_auto_recover.nut"
 ]); // Auto Recover
+::LegendsCompat.IncompatNotRegistered.add("mod_better_kings_guard", [
+"scripts/skills/backgrounds/hidden_kings_guard_background.nut"
+]); // Better King’s Guard
+::LegendsCompat.IncompatNotRegistered.add("mod_contract", [
+"scripts/!mods_preload/mod_contract.nut",
+"scripts/config/z_mod_contracts.nut"
+]); // Better Contracts in Late Game
+::LegendsCompat.IncompatNotRegistered.add("mod_buffedNamedShields", [
+"scripts/!mods_preload/mod_buffedNamedShields.nut"
+]); // Buffed Names Shields
+::LegendsCompat.IncompatNotRegistered.add("mod_buffNamedWeaponsSlight", [
+"scripts/!mods_preload/mod_buffedNamedWeaponsSlight.nut"
+]); // Buffed Named Weapons
+::LegendsCompat.IncompatNotRegistered.add("data_991 (Campaign Tweakster)", [
+"scripts/!mods_preload/mod_campaignTweakster.nut"
+]); // Campaign Tweakster
 ::LegendsCompat.IncompatNotRegistered.add("mod_rule_101_formations", [
 "scripts/config/z_mods_rule_000.nut",
 "scripts/config/z_mods_rule_000_formations.nut"
 ]); // Company Formations and all variations
+::LegendsCompat.IncompatNotRegistered.add("Mod_Non_Company_Tabards", [
+"scripts/items/armor_upgrades/tabard_10_upgrade.nut",
+"scripts/items/armor_upgrades/tabard_11_upgrade.nut",
+"scripts/items/armor_upgrades/tabard_12_upgrade.nut"
+]); // Company Tabards
 ::LegendsCompat.IncompatNotRegistered.add("mod_pots", [
 "scripts/entity/tactical/enemies/pot.nut",
 "scripts/config/mod_pots.nut"
 ]); // Cracking Pots Minigame in Arena
+::LegendsCompat.IncompatNotRegistered.add("Craftable Autonomist Potions", [
+"scripts/crafting/blueprints/ifrit_potion_item_blueprint.nut",
+"scripts/crafting/blueprints/ijirok_potion_item_blueprint.nut",
+"scripts/crafting/blueprints/kraken_potion_item_blueprint.nut",
+"scripts/crafting/blueprints/lindwurm_potion_item_blueprint.nut",
+"scripts/crafting/blueprints/lorekeeper_potion_item_blueprint.nut",
+"scripts/crafting/blueprints/nachzehrer_potion_item_blueprint.nut",
+"scripts/crafting/blueprints/necromancer_potion_item_blueprint.nut"
+]); // Craftable Autonomist Potion
+::LegendsCompat.IncompatNotRegistered.add("craft_more_potions", [
+"scripts/items/accessory/berserker_mushrooms_item_preview.nut",
+"scripts/items/special/bodily_reward_item_preview.nut",
+"scripts/items/special/spiritual_reward_item_preview.nut",
+"scripts/items/tools/holy_water_item_preview.nut"
+]); // Craft More Potions
+::LegendsCompat.IncompatNotRegistered.add("mod_cultistOriginEventFrequency", [
+"scripts/!mods_preload/cultistOriginEventFrequencyTweaks.nut"
+]); // Cultist Origin Event Frequency Increase
+::LegendsCompat.IncompatNotRegistered.add("mod_deterministic_loot", [
+"scripts/!mods_preload/mod_deterministic_loot.nut"
+]); // Deterministic Loot
 ::LegendsCompat.IncompatNotRegistered.add("dual_wielding", [
 "scripts/crafting/blueprints/flail_dw_blueprint.nut",
 "scripts/crafting/blueprints/heavy_southern_mace_dw_blueprint.nut",
@@ -407,6 +469,11 @@
 "scripts/crafting/blueprints/order_heater_shield_blueprint2.nut",
 "scripts/crafting/blueprints/order_holy_water_blueprint2.nut"
 ]); // UNFINISHED Fallen Order origin
+::LegendsCompat.IncompatNotRegistered.add("mod_UnlimitedFoodAmmoParts", [
+"scripts/!mods_preload/FAP_ammo_item.nut",
+"scripts/!mods_preload/FAP_armor_parts_item.nut",
+"scripts/!mods_preload/FAP_cured_rations_item.nut"
+]); // Unlimited Food Ammo Supplies
 ::LegendsCompat.IncompatNotRegistered.add("witcher_mod", [
 "scripts/skills/actives/gryphon_style.nut",
 "scripts/skills/actives/igni_skill.nut",
@@ -456,6 +523,89 @@
 ::LegendsCompat.IncompatNotRegistered.add("tnf_trueNightOwl", ["scripts/!mods_preload/tnf_trueNightOwl.nut"]);
 ::LegendsCompat.IncompatNotRegistered.add("tnf_tryout", ["scripts/!mods_preload/tnf_tryout.nut"]);
 //endregion
+
+
+//4 Stats per level up
+//100% Vala
+//A Mod Collection Repack
+//Close Combat Archer Rework
+//Custom Beggar Origin
+
+
+
+//Editable Retinue Members.
+//    Effective Hitpoints.
+//    Equalized Attributes and Stats.
+//    Enchant Weapon
+//Enemy with Random Perks.
+//    Escaped Slaves Origin Buff
+//Event Frequency Mod
+//Every Contract is a 4 Skull
+//Every Enemy a Champion
+//Favored Enemy on Everybro
+//Fix of Rebalance Retinue Members Without Cart Upgrade
+//Get Loot Without Last Hit
+//Gobbowpoacher Skills.
+//    Healable Injury(Legends).
+//    Hexen Skills Tweak.
+//    Hitpoint Injuries in Combat.
+//Houndmaster Class Perk Buffs Legends.
+//    Improved Training Grounds Legends
+//Improved Ambitions
+//Jimmy's Tooltip
+//Legends Noble Army Uniforms.
+//    Legends Favoured Enemy Perk Point Refund.
+//    Less Severe Permanent Injuries.
+//    Less Grind 50.
+//Lifetime Stats
+//Limit Break Mod.
+//    Lindwurm Bugfix
+//LNG’s Realistic Combat.
+//    LNG’s True Handgonne.
+//    Long Time Heavy Injuries Instead of Permanent.
+//LGS Enhanced Tooltip
+//More Bandits
+//More Indirect Numeral Adjectives
+//More Profit from Some Contracts
+//More Map Sliders for Legends
+//More Profit From Some Contracts
+//Named Item Rarity in Shops
+//No Hit Percentage Cap - 2022 edition
+//No Restriction Arena
+//No More Trash Named Weapons
+//Origin Customizer.
+//    Obsidian Dagger Loot Fix
+//Proper Raids
+//Quicker
+//Quickly Swap Items
+//Reserve Size.
+//    Remove Hit Chance Cap
+//Replace and Restore Equipped Items
+//Reproach of the Old Gods Upgrade.
+//Revamped XP
+//Ryger's Perk Selection Tooltip Overhaul
+//Sato’s Assorted Tweaks
+//Settlement Situation Tooltip
+//Settlement Situation Worldmap Tooltip
+//Static Perk Trees for Legends.
+//    Slightly Bigger Mods.
+//    Stabilized Perk.
+//    Standardize Bro Counts
+//Tactical Hit Factors
+//Temple Remove Injuries.
+//    The Player NPC Equality Mod
+//Tweaks and Fixes
+//Trade Monster Loot Price Increase
+//Tryout Talents Alternative
+//Turn it in
+//Universal Mod
+//Unlock Camps
+//Unlock Retinues
+//Uncapped Levels
+//Veteran XP to Rookies
+//XP in Reserve
+
+
 
 //idk about these:
 //Brothers WoW
