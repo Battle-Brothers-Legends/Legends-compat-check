@@ -110,6 +110,8 @@
 ::LegendsCompat.HardIncompat.add("mod_broWithRandomPerks", "1.1");
 ::LegendsCompat.HardIncompat.add("mod_buffed_named_items", "1.0.0"); // GinoFelino version
 ::LegendsCompat.HardIncompat.add("CampaignTweakster", "6");
+::LegendsCompat.HardIncompat.add("mod_cartupgrade", "1.0");
+::LegendsCompat.HardIncompat.add("mod_challengeScenarioPack", "1.0");
 ::LegendsCompat.HardIncompat.add("mod_champion_beasts", "1.2.0");
 ::LegendsCompat.HardIncompat.add("mod_Chirutiru_enemies", "1", "Sellswords not compaible, there's Legends version of this mod on Legends Discord"); // This entry should cover old Sellswords
 ::LegendsCompat.HardIncompat.add("comrades_mod", "4.3.0"); 
@@ -122,17 +124,23 @@
 ::LegendsCompat.HardIncompat.add("mod_equal_stats", "1"); 
 ::LegendsCompat.HardIncompat.add("mod_equipment_loot_chance", "1.0.4"); 
 ::LegendsCompat.HardIncompat.add("mod_every_item_drops", "1.1.1"); // Waterplouf version 
+::LegendsCompat.HardIncompat.add("mod_extra_keybinds", "2.1.0"); // a lot of bug reports lately with this mod... 
 ::LegendsCompat.HardIncompat.add("mod_faster", null, "Use Swifter instead, found on Nexus");
+::LegendsCompat.HardIncompat.add("mod_fastest", null, "Use Swifter instead, found on Nexus");
 ::LegendsCompat.HardIncompat.add("mod_legends_favoured_enemy_refund", "2.0.1");
 ::LegendsCompat.HardIncompat.add("graven_passive_shield_damage_bonus", "1.0");
 ::LegendsCompat.HardIncompat.add("graven_plentiful_paints", "1.1");
+::LegendsCompat.HardIncompat.add("mod_hackflows_perks", "1.4");
 ::LegendsCompat.HardIncompat.add("mod_healable_injury", "1.0");
 ::LegendsCompat.HardIncompat.add("Mod_Heavy_Injuries_MSU", "3.0.0");
+::LegendsCompat.HardIncompat.add("mod_hireNaked", "1.0");
+::LegendsCompat.HardIncompat.add("mod_hitpoint_injury", "1");
 ::LegendsCompat.HardIncompat.add("mod_Drakes_Improved_Ambitions", "1.4.1");
 ::LegendsCompat.HardIncompat.add("mod_items_recipes", "2.0.0");
 ::LegendsCompat.HardIncompat.add("mod_jin", "1.0"); // Jurchen mod
 ::LegendsCompat.HardIncompat.add("mod_lifetime_stats", "1"); 
 ::LegendsCompat.HardIncompat.add("mod_legendary_kriegsgeist_boss_location", "1.0.5"); // SSU has more updated version of this now
+::LegendsCompat.HardIncompat.add("mod_menace", "0.03"); 
 ::LegendsCompat.HardIncompat.add("mod_more_buildings", "0.5"); 
 ::LegendsCompat.HardIncompat.add("mod_more_champions_x5");
 ::LegendsCompat.HardIncompat.add("mod_more_champions_x10");
@@ -151,10 +159,13 @@
 ::LegendsCompat.HardIncompat.add("quicker", "1.3.1", "Use Swifter instead, found on Nexus");
 ::LegendsCompat.HardIncompat.add("quirks", "0.8.0"); 
 ::LegendsCompat.HardIncompat.add("mod_raided", "1.0");
+::LegendsCompat.HardIncompat.add("mod_repeatableOguTrophyAmbitions", "1.0");
 ::LegendsCompat.HardIncompat.add("mod_Recruits", "2");
 ::LegendsCompat.HardIncompat.add("mod_reforged", "0.6.12");
 ::LegendsCompat.HardIncompat.add("mod_RREI", "1.0.0"); // Replace and Restore Equipped Items
+::LegendsCompat.HardIncompat.add("mod_rpgr_avatar_resistances", "1.5.0");
 ::LegendsCompat.HardIncompat.add("mod_RevampedXPSystem", "1.0.0");
+::LegendsCompat.HardIncompat.add("zmod_rise_of_the_usurper", "1.0.0", "More recent Rotu vers found at Legends / Submods"); // old ass Nexus rotu version
 ::LegendsCompat.HardIncompat.add("mod_rpgr_raids", "4.0.1");
 ::LegendsCompat.HardIncompat.add("mod_save", "1.0.0"); // Enhanced Autosave
 ::LegendsCompat.HardIncompat.add("mod_sellswords", "8.2.9"); // SSU
@@ -165,11 +176,14 @@
 ::LegendsCompat.HardIncompat.add("mod_talents_reworked", "1");
 ::LegendsCompat.HardIncompat.add("mod_tavern_arena", "1.0");
 ::LegendsCompat.HardIncompat.add("mod_olto_l_temple_remove_injuries", "1.15");
+::LegendsCompat.HardIncompat.add("mod_town_management", "0.1");
 ::LegendsCompat.HardIncompat.add("mod_true_balance", "1.8");
 ::LegendsCompat.HardIncompat.add("mod_two_for_one", "1.1.0");
 ::LegendsCompat.HardIncompat.add("mod_ultrabros", "3.3.0");
+::LegendsCompat.HardIncompat.add("mod_undead_trophy_upgrade_reroll", "1.0");
 ::LegendsCompat.HardIncompat.add("mod_unlockFollower", "1");
 ::LegendsCompat.HardIncompat.add("mod_useful", "0.6");
+::LegendsCompat.HardIncompat.add("mod_vap", "2.1.0"); // Veteran Attrs and Perks
 ::LegendsCompat.HardIncompat.add("mod_veteran_attributes", "2.0.0");
 ::LegendsCompat.HardIncompat.add("mod_veteranStamina", "4");
 ::LegendsCompat.HardIncompat.add("mod_warhammer", "1.0"); // old skaven mod
@@ -184,14 +198,17 @@
 ::LegendsCompat.SoftIncompat.add("mod_BLPT", "0.1.2"); // Darx's Bad Luck Protection
 ::LegendsCompat.SoftIncompat.add("mod_bro_storage", "1.0.2"); 
 ::LegendsCompat.SoftIncompat.add("mod_camps_and_artifacts", "3.4");
+::LegendsCompat.SoftIncompat.add("mod_career_stats", "1.0.2");
 ::LegendsCompat.SoftIncompat.add("mod_cultists", "1.04"); // Davkul Rising
 ::LegendsCompat.SoftIncompat.add("mod_fantasybro", "1.0");
 ::LegendsCompat.SoftIncompat.add("mod_fun_facts", "0.5.0");
+::LegendsCompat.SoftIncompat.add("mod_find_legendary_locations", "1", "Use Chopek's Find Legendary Maps instead, at Legends / Submods");
 ::LegendsCompat.SoftIncompat.add("mod_necropolis", "1.0");
 ::LegendsCompat.SoftIncompat.add("mod_PLHO", "0.1.1"); // Darx's Player Hideout
 ::LegendsCompat.SoftIncompat.add("mod_retinue_ups", "1.1"); // Hackflow's Retinue Promotions
 ::LegendsCompat.SoftIncompat.add("mod_SAF", "1.0.0"); // Darx's Stackable Arena Fights
 ::LegendsCompat.SoftIncompat.add("mod_streamlined_ui", "1.0.3"); 
+::LegendsCompat.SoftIncompat.add("mod_URUI", "1.2.0"); // Unrecognized UI
 //endregion
 
 //region IncompatButPatched
@@ -204,7 +221,7 @@
 //endregion
 
 //region IncompatNotRegistered
-::LegendsCompat.IncompatNotRegistered.add("mod_anatomists", [
+::LegendsCompat.IncompatNotRegistered.add("mod_anatomists", [ // Anatomist Origin Rework
 "scripts/retinue/followers/remedist_follower.nut",
 "scripts/items/misc/essence_honor_guard_potion_item.nut",
 "scripts/items/misc/essence_geist_potion_item.nut"
