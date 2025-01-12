@@ -202,7 +202,7 @@
 ::LegendsCompat.SoftIncompat.add("mod_cultists", "1.04"); // Davkul Rising
 ::LegendsCompat.SoftIncompat.add("mod_fantasybro", "1.0");
 ::LegendsCompat.SoftIncompat.add("mod_fun_facts", "0.5.0");
-::LegendsCompat.SoftIncompat.add("mod_find_legendary_locations", "1", "Use Chopek's Find Legendary Maps instead, at Legends / Submods");
+::LegendsCompat.SoftIncompat.add("mod_find_legendary_locations", "1", "Use Chopek's Find Legendary Maps instead, at Nexus or Legends Discord (#submod_files/Find Legendary Maps)");
 ::LegendsCompat.SoftIncompat.add("mod_necropolis", "1.0");
 ::LegendsCompat.SoftIncompat.add("mod_PLHO", "0.1.1"); // Darx's Player Hideout
 ::LegendsCompat.SoftIncompat.add("mod_retinue_ups", "1.1"); // Hackflow's Retinue Promotions
@@ -266,9 +266,6 @@
 "scripts/!mods_preload/mod_fencer.nut",
 "scripts/skills/actives/rush.nut"
 ]); // Fencer New Skill
-::LegendsCompat.IncompatNotRegistered.add("mod_find_legendary_locations", [
-"scripts/!mods_preload/mod_find_legendary_locations.nut"
-], "similar functionality in submod, on Legends Discord (#submod_files/Find Legendary Maps)"); // Find Grotesque Tree
 ::LegendsCompat.IncompatNotRegistered.add("Gender Scenarios", [
 "scripts/events/events/scenario/legend_gendered_seer_intro_event.nut",
 "scripts/events/events/scenario/legend_vala_mid_intro_event.nut",
@@ -405,21 +402,6 @@
 "scripts/skills/actives/necromancy.nut",
 "scripts/skills/perks/perk_necromancy.nut"
 ]); // True Necromancy
-::LegendsCompat.IncompatNotRegistered.add("", [
-"",
-"",
-""
-]); //
-::LegendsCompat.IncompatNotRegistered.add("", [
-"",
-"",
-""
-]); //
-
-
-
-
-
 ::LegendsCompat.IncompatNotRegistered.add("mod_fallen_order", [
 "scripts/crafting/blueprints/order_kite_shield_blueprint2.nut",
 "scripts/crafting/blueprints/order_heater_shield_blueprint2.nut",
