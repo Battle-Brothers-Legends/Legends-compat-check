@@ -45,6 +45,8 @@ mod.queue(">mod_legends", function() {
 
 			local expectedScript = ::split(file, ".")[0];
 			local scriptFiles = this.IO.enumerateFiles(file.slice(0, lastSlash));
+			if (scriptFiles == null)
+				continue;
 			foreach(scriptFile in scriptFiles) {
 				if (expectedScript == scriptFile) {
 					foundFiles++;
