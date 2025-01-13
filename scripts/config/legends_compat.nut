@@ -122,7 +122,7 @@
 ::LegendsCompat.HardIncompat.add("mod_elevation_bindings", "2");
 ::LegendsCompat.HardIncompat.add("Mod_Editable_Retinue_MSU", "3.0.3");
 ::LegendsCompat.HardIncompat.add("TheEliteFewCore", "1.2");
-::LegendsCompat.HardIncompat.add("mod_elite_few", "2.4.1"); // Hackflow version
+//::LegendsCompat.HardIncompat.add("mod_elite_few", "2.4.1"); // Hackflow version
 ::LegendsCompat.HardIncompat.add("mod_enemyWithRandomPerks", "1.0");
 ::LegendsCompat.HardIncompat.add("mod_equal_stats", "1"); 
 ::LegendsCompat.HardIncompat.add("mod_equipment_loot_chance", "1.0.4"); 
