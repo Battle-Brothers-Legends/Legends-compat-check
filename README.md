@@ -1,4 +1,4 @@
-## [ Download Latest Version here](./releases/latest_build)
+## [ Download Latest Version here](https://github.com/Battle-Brothers-Legends/Legends-compat-check/releases/latest)
 
 
 ## Legends Mod Compatibility
