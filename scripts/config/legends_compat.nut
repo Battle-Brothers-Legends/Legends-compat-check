@@ -112,7 +112,7 @@
 ::LegendsCompat.HardIncompat.add("mod_cartupgrade", "1.0");
 ::LegendsCompat.HardIncompat.add("mod_challengeScenarioPack", "1.0");
 ::LegendsCompat.HardIncompat.add("mod_champion_beasts", "1.2.0");
-::LegendsCompat.HardIncompat.add("mod_Chirutiru_enemies", "1", "Sellswords not compaible, there's Legends version of this mod on Legends Discord"); // This entry should cover old Sellswords
+::LegendsCompat.HardIncompat.add("mod_Chirutiru_enemies", "1", "Sellswords not compaible, there's Legends version of this mod (SSU) on Legends Discord"); // This entry should cover old Sellswords
 ::LegendsCompat.HardIncompat.add("sarisofoi_company_tabards"); // Company Tabards
 ::LegendsCompat.HardIncompat.add("comrades_mod", "4.3.0");
 ::LegendsCompat.HardIncompat.add("mod_desertswampSliders", "1.0"); // More map sliders
@@ -172,7 +172,7 @@
 ::LegendsCompat.HardIncompat.add("zmod_rise_of_the_usurper", "1.0.0", "More recent Rotu vers found at Legends / Submods"); // old ass Nexus rotu version
 ::LegendsCompat.HardIncompat.add("mod_rpgr_raids", "4.0.1");
 ::LegendsCompat.HardIncompat.add("mod_save", "1.0.0"); // Enhanced Autosave
-::LegendsCompat.HardIncompat.add("mod_sellswords", "8.2.9"); // SSU
+//::LegendsCompat.HardIncompat.add("mod_sellswords", "8.2.9"); // SSU, now Legends V19+ compatible 
 ::LegendsCompat.HardIncompat.add("mod_smart_recruiter_legends", "1.0"); 
 ::LegendsCompat.HardIncompat.add("mod_solostart", "1.0"); 
 ::LegendsCompat.HardIncompat.add("mod_southernNomad", "1.0");
