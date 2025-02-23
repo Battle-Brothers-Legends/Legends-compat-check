@@ -89,7 +89,7 @@
 	"mod_MINA", // More Indefinite Numeral Adjectives - a similar feature is implemented in legends
 	"mod_tooltip_extension", // Rygar's perk tooltip
 	"mod_turn_it_in"
-]
+];
 // Abyss note: Legends mod incompatibility doc all in except for mods that did not have a modspreload / modID name
 // or mods that had mutliple versions of same mod 1/3/25
 //region HardIncompat
@@ -154,7 +154,6 @@
 ::LegendsCompat.HardIncompat.add("mod_moreRecruits", "2");
 ::LegendsCompat.HardIncompat.add("mod_more_weapon_skins", "0.8.0"); // Many of Karl's skins are being integ into Legends
 ::LegendsCompat.HardIncompat.add("mod_necro", "0.3.0"); // Hackflow's Proper Necromancer
-::LegendsCompat.HardIncompat.add("mod_nggh_magic_concept", "3.0.0-beta.76"); // MC
 ::LegendsCompat.HardIncompat.add("mod_no_hitcap", "1.0.0"); // "2022 edition"
 ::LegendsCompat.HardIncompat.add("mod_no_more_trash_named_weapons", "2"); 
 ::LegendsCompat.HardIncompat.add("mod_north_expansion", "0.7.2"); // Hamen's doing a Legends compat version in future let's fucking gooooo!
@@ -166,7 +165,16 @@
 ::LegendsCompat.HardIncompat.add("mod_raided", "1.0");
 ::LegendsCompat.HardIncompat.add("mod_repeatableOguTrophyAmbitions", "1.0");
 ::LegendsCompat.HardIncompat.add("mod_Recruits", "2");
-::LegendsCompat.HardIncompat.add("mod_reforged", "0.6.12");
+::LegendsCompat.HardIncompat.add("mod_reforged");
+// and reforged deps
+::LegendsCompat.HardIncompat.add("mod_dynamic_perks");
+::LegendsCompat.HardIncompat.add("mod_dynamic_spawns");
+::LegendsCompat.HardIncompat.add("mod_item_tables");
+::LegendsCompat.HardIncompat.add("mod_stack_based_skills");
+::LegendsCompat.HardIncompat.add("mod_upd");
+::LegendsCompat.HardIncompat.add("mod_modular_vanilla");
+::LegendsCompat.HardIncompat.add("mod_nested_tooltips");
+
 ::LegendsCompat.HardIncompat.add("mod_RREI", "1.0.0"); // Replace and Restore Equipped Items
 ::LegendsCompat.HardIncompat.add("mod_rpgr_avatar_resistances", "1.5.0");
 ::LegendsCompat.HardIncompat.add("mod_Reproach_sword_upgrade", "1.0");
@@ -174,8 +182,7 @@
 ::LegendsCompat.HardIncompat.add("zmod_rise_of_the_usurper", "1.0.0", "More recent Rotu vers found at Legends / Submods"); // old ass Nexus rotu version
 ::LegendsCompat.HardIncompat.add("mod_rpgr_raids", "4.0.1");
 ::LegendsCompat.HardIncompat.add("mod_save", "1.0.0"); // Enhanced Autosave
-::LegendsCompat.HardIncompat.add("mod_sellswords", "8.2.9"); // SSU
-::LegendsCompat.HardIncompat.add("mod_smart_recruiter_legends", "1.0"); 
+::LegendsCompat.HardIncompat.add("mod_smart_recruiter_legends", "1.0");
 ::LegendsCompat.HardIncompat.add("mod_solostart", "1.0"); 
 ::LegendsCompat.HardIncompat.add("mod_southernNomad", "1.0");
 ::LegendsCompat.HardIncompat.add("mod_standout_enemies", "1.2");
@@ -213,7 +220,7 @@
 ::LegendsCompat.SoftIncompat.add("mod_find_legendary_locations", "1", "Use Chopek's Find Legendary Maps instead, at Nexus or Legends Discord (#submod_files/Find Legendary Maps)");
 ::LegendsCompat.SoftIncompat.add("mod_necropolis", "1.0");
 ::LegendsCompat.SoftIncompat.add("mod_PLHO", "0.1.1"); // Darx's Player Hideout
-::LegendsCompat.SoftIncompat.add("mod_retinue_ups", "1.1"); // Hackflow's Retinue Promotions
+::LegendsCompat.SoftIncompat.add("mod_retinue_ups", "1.2.1"); // Hackflow's Retinue Promotions
 ::LegendsCompat.SoftIncompat.add("mod_SAF", "1.0.0"); // Darx's Stackable Arena Fights
 ::LegendsCompat.SoftIncompat.add("mod_streamlined_ui", "1.0.3"); 
 ::LegendsCompat.SoftIncompat.add("mod_URUI", "1.2.0"); // Unrecognized UI
@@ -225,7 +232,7 @@
 //endregion
 
 //region OtherVersionCompat
-::LegendsCompat.OtherVersionCompat.add("mod_plan_perks", ["5.0.0"])
+::LegendsCompat.OtherVersionCompat.add("mod_plan_perks", ["5.0.0"]);
 //endregion
 
 //region IncompatNotRegistered
