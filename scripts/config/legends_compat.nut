@@ -151,6 +151,7 @@
 ::LegendsCompat.HardIncompat.add("mod_more_followers", "1.1");
 ::LegendsCompat.HardIncompat.add("mod_moreRecruits", "2");
 ::LegendsCompat.HardIncompat.add("mod_more_weapon_skins", "0.8.0"); // Many of Karl's skins are being integ into Legends
+::LegendsCompat.HardIncompat.add("mod_namedShieldsInShops", "1.0"); 
 ::LegendsCompat.HardIncompat.add("mod_necro", "0.3.0"); // Hackflow's Proper Necromancer
 //::LegendsCompat.HardIncompat.add("mod_nggh_magic_concept", "3.0.0-beta.76"); // Necro's MC is now Legends V19+ compatible
 ::LegendsCompat.HardIncompat.add("mod_no_hitcap", "1.0.0"); // "2022 edition"
