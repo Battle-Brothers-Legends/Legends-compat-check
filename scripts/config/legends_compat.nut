@@ -120,6 +120,7 @@
 ::LegendsCompat.HardIncompat.add("mod_effective_hitpoints", "2.0.0");
 ::LegendsCompat.HardIncompat.add("mod_elevation_bindings", "2");
 ::LegendsCompat.HardIncompat.add("Mod_Editable_Retinue_MSU", "3.0.3");
+::LegendsCompat.HardIncompat.add("mod_EIMO", "10.0.6");
 ::LegendsCompat.HardIncompat.add("TheEliteFewCore", "1.2");
 //::LegendsCompat.HardIncompat.add("mod_elite_few", "2.4.1"); // Hackflow version
 ::LegendsCompat.HardIncompat.add("mod_enemyWithRandomPerks", "1.0");
@@ -207,6 +208,7 @@
 ::LegendsCompat.HardIncompat.add("mod_wushi", "1.0"); // Samurai mod
 ::LegendsCompat.HardIncompat.add("mod_new_named_weapons", "1.0"); // Zythaer's Better Weapons
 ::LegendsCompat.HardIncompat.add("mod_xpInReserve", "1.0"); // XP in Reserve
+::LegendsCompat.HardIncompat.add("sato_corpse_loot_fix"); // Sato's Corpse Loot Fix
 //endregion
 
 //region SoftIncompat
